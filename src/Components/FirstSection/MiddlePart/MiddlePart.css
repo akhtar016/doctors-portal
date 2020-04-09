@@ -1,0 +1,22 @@
+
+.content{
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+#description{
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 150px;
+}
+div > h2{
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.custom-btn{
+    text-transform: uppercase;
+    font: bold;
+}
+

@@ -1,0 +1,13 @@
+.navbar-nav > li{
+    margin-left:20px;
+    margin-right:20px;
+    margin-top: 25px;
+  }
+  .navbar-nav > li > a {
+      color: black;
+  }
+
+
+  .sec-part{
+      margin-top: 100px;
+  }

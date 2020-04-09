@@ -1,0 +1,11 @@
+.bg-image{  
+    background-image: url("https://res.cloudinary.com/dllb2cjw6/image/upload/v1586321505/Mask_Group_2_lxaw8c.png");
+    max-width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;   
+}
+.component-firstSec{
+  overflow: hidden;
+}
+
