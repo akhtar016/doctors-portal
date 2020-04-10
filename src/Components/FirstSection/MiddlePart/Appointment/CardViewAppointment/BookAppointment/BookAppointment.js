@@ -23,7 +23,7 @@ const BookAppointment = (props) => {
 
     // post data to server
 
-    fetch("http://localhost:4200/addUser", {
+    fetch("https://doctor-portals.herokuapp.com/addUser", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -41,7 +41,7 @@ const BookAppointment = (props) => {
 
       // get data from database
 
-      fetch('http://localhost:4200/patientInfo')
+      fetch('https://doctor-portals.herokuapp.com/patientInfo')
       .then(res => res.json())
       .then(data=> {
         console.log("Data from database: " ,data);
