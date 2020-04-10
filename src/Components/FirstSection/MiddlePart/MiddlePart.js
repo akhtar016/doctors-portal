@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const MiddlePart = () => {
   return (
-    <div class="content">
-      <div class="row">
-        <div class="col-6">
+    <div className="content">
+      <div className="row">
+        <div className="col-6">
             <h4>Your New Smile</h4>
             <h4>Starts Here</h4>
             <p id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, facilis aliquam ab placeat, aut minus non architecto voluptatem exercitationem excepturi velit harum odit amet voluptate</p>
