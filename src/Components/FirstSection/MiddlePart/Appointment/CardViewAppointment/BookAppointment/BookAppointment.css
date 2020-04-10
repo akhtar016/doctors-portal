@@ -2,6 +2,10 @@
     box-sizing: border-box!important;
 }
 
+.text-info{
+    margin-bottom: 15px;
+}
+
 
 
 .book-appointment form {
@@ -28,10 +32,10 @@ label {
     line-height: 2;
     text-align: left;
     display: block;
-    margin-bottom: 13px;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     color:black;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     margin-right: 10px ;
   }
