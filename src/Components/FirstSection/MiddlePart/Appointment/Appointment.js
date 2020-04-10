@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Navbar from "../../Navbar/Navbar";
 import "./Appointment.css";
 import Calendar from "react-calendar";
+import fakeData from "./../../../../Data/fakeData.json";
 import "react-calendar/dist/Calendar.css";
+import CardViewAppointment from "./CardViewAppointment/CardViewAppointment";
 
 const Appointment = () => {
   const [date, setDate] = useState(new Date());
@@ -11,13 +13,30 @@ const Appointment = () => {
     setDate(date);
   };
 
+  function formattedDate(date){
+
+  const clickedDate = date.toString();
+  const splitDate = clickedDate.split(" ");
+  const formatDate = `${splitDate[1]} ${splitDate[2]},${splitDate[3]}`;
+  return formatDate;
+
+  }
+
+  // const clickedDate = date.toString();
+  // const splitDate = clickedDate.split(" ");
+  // const formatDate = `${splitDate[1]} ${splitDate[2]},${splitDate[3]}`;
+
+  const availableDate = formattedDate(date);
+  console.log(availableDate)
+  
+
   return (
     <div className="appointment-Sec">
       <div className="bg-image">
         <Navbar className="navbar"></Navbar>
-        <div class="content">
-          <div class="row">
-            <div class="col-6">
+        <div className="content">
+          <div className="row">
+            <div className="col-6">
               <h2>Appointment</h2>
               <Calendar onChange={onChange} value={date} />
             </div>
@@ -38,116 +57,22 @@ const Appointment = () => {
           style={{ color: "#0a8268", fontWeight: "600" }}
           className="text-center"
         >
-          Available Appointments On {date.toString()}{" "}
+          Available Appointments On {availableDate}
         </h1>
       </div>
 
-      <div class="row card-custom text-center">
-        <div class="col-sm-4">
-          <div class="card" style={{ marginBottom: "20px" }}>
-            <div class="card-body">
-              <h4
-                class="card-title"
-                style={{ color: "#0a8268", fontWeight: "600" }}
-              >
-                Teeth Orthodontics
-              </h4>
-              <h6 style={{ fontWeight: "bold" }}>8:00 AM - 9:00 AM</h6>
-              <p style={{ color: "gray" }}>10 SPACES AVAILABLE</p>
-              <a href="# " class="btn btn-info">
-                Book Appointment
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h4
-                class="card-title"
-                style={{ color: "#0a8268", fontWeight: "600" }}
-              >
-                Cosmetic Dentistry
-              </h4>
-              <h6 style={{ fontWeight: "bold" }}>10:05 AM - 11:30 AM</h6>
-              <p style={{ color: "gray" }}>10 SPACES AVAILABLE</p>
-              <a href="# " class="btn btn-info">
-                Book Appointment
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h4
-                class="card-title"
-                style={{ color: "#0a8268", fontWeight: "600" }}
-              >
-                Teeth Cleaning
-              </h4>
-              <h6 style={{ fontWeight: "bold" }}>5:00 PM - 6:30 PM</h6>
-              <p style={{ color: "gray" }}>10 SPACES AVAILABLE</p>
-              <a href="# " class="btn btn-info">
-                Book Appointment
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className="row my-3 custom-design">
 
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h4
-                class="card-title"
-                style={{ color: "#0a8268", fontWeight: "600" }}
-              >
-                Teeth Orthodontics
-              </h4>
-              <h6 style={{ fontWeight: "bold" }}>8:00 AM - 9:00 AM</h6>
-              <p style={{ color: "gray" }}>10 SPACES AVAILABLE</p>
-              <a href="# " class="btn btn-info">
-                Book Appointment
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h4
-                class="card-title"
-                style={{ color: "#0a8268", fontWeight: "600" }}
-              >
-                Cosmetic Dentistry
-              </h4>
-              <h6 style={{ fontWeight: "bold" }}>10:05 AM - 11:30 AM</h6>
-              <p style={{ color: "gray" }}>10 SPACES AVAILABLE</p>
-              <a href="# " class="btn btn-info">
-                Book Appointment
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h4
-                class="card-title"
-                style={{ color: "#0a8268", fontWeight: "600" }}
-              >
-                Teeth Cleaning
-              </h4>
-              <h6 style={{ fontWeight: "bold" }}>5:00 PM - 6:30 PM</h6>
-              <p style={{ color: "gray" }}>10 SPACES AVAILABLE</p>
-              <a href="# " class="btn btn-info">
-                Book Appointment
-              </a>
-            </div>
-          </div>
-        </div>
+          {
+              fakeData.map(available=> <CardViewAppointment available={available}></CardViewAppointment> )
+          }
+          
       </div>
-    </div>
+
+
+      </div>
+
+    
   );
 };
 

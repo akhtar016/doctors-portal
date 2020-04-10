@@ -5,39 +5,39 @@ const Navbar = () => {
   return (
 
         
-      <nav class="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-expand-xl">
         <div
-          class="collapse navbar-collapse d-flex justify-content-end"
+          className="collapse navbar-collapse d-flex justify-content-end"
           id="navbarNav"
         >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="# ">
-                Home <span class="sr-only">(current)</span>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link" href="# ">
+                Home <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
+            <li className="nav-item">
+              <a className="nav-link" href="/">
                 About
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
+            <li className="nav-item">
+              <a className="nav-link" href="/">
                 Dental Services
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
+            <li className="nav-item">
+              <a className="nav-link" href="/">
                 Reviews
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
+            <li className="nav-item">
+              <a className="nav-link" href="/">
                 Blog
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
+            <li className="nav-item">
+              <a className="nav-link" href="/">
                 Contact Us
               </a>
             </li>

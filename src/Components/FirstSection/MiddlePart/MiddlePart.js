@@ -7,9 +7,9 @@ const MiddlePart = () => {
     <div class="content">
       <div class="row">
         <div class="col-6">
-            <h2>Your New Smile</h2>
-            <h2>Starts Here</h2>
-            <p id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, facilis aliquam ab placeat, aut minus non architecto voluptatem exercitationem excepturi velit harum odit amet voluptate, assumenda perferendis officiis repellendus deserunt?</p>
+            <h4>Your New Smile</h4>
+            <h4>Starts Here</h4>
+            <p id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, facilis aliquam ab placeat, aut minus non architecto voluptatem exercitationem excepturi velit harum odit amet voluptate</p>
             <Link to="/get-appointment"><button className="btn btn-info custom-btn">Get Appointment</button></Link>
         </div>
         <div className="col-6 d-flex justify-content-end">

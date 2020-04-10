@@ -1,0 +1,14 @@
+.custom-card-body h4{
+    color: seagreen;
+}
+.custom-card-body p{
+    color: gray;
+}
+
+.custom-card-body h6{
+    font-weight: bold;
+}
+
+.custom-card-body h4{
+    font-weight: 600;
+}
