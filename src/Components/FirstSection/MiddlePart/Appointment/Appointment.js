@@ -19,7 +19,6 @@ const Appointment = () => {
   const splitDate = clickedDate.split(" ");
   const formatDate = `${splitDate[1]} ${splitDate[2]},${splitDate[3]}`;
   return formatDate;
-
   }
 
   // const clickedDate = date.toString();
@@ -64,7 +63,7 @@ const Appointment = () => {
       <div className="row my-3 custom-design">
 
           {
-              fakeData.map(available=> <CardViewAppointment available={available}></CardViewAppointment> )
+              fakeData.map(available=> <CardViewAppointment available={available} formattedDate={availableDate}></CardViewAppointment> )
           }
           
       </div>

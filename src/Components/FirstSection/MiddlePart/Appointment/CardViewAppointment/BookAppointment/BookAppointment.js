@@ -1,11 +1,20 @@
 import React from "react";
 import fakeData from "./../../../../../../Data/fakeData.json";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./BookAppointment.css";
 
-const BookAppointment = () => {
+const BookAppointment = (props) => {
   const { key } = useParams();
+
+  const location = useLocation(props);
+
+  const date = location.date.selectedDate;
+
+  
+  console.log("This is date from book appointment page:",date);
+
+  
 
   const appointment = fakeData.find((ap) => ap.key === key);
 
@@ -33,7 +42,7 @@ const BookAppointment = () => {
 
   return (
     <div className="book-appointment">
-      <div className="container">
+      <div>
         <form
           onSubmit={handleSubmit(onSubmit)}
           id="form-clear"
@@ -41,7 +50,7 @@ const BookAppointment = () => {
         >
           <h2
             className="text-center text-info"
-            style={{ marginBottom: "25px" }}
+            style={{ marginBottom: "15px" }}
           >
             {appointment.name}
           </h2>
@@ -80,6 +89,14 @@ const BookAppointment = () => {
               ref={register({ required: true })}
               disabled
               defaultValue={appointment.time}
+            />
+            <label>Selected Date</label>
+            <input
+              name="selectedDate"
+              className="form-control"
+              ref={register({ required: true })}
+              disabled
+              defaultValue={date}
             />
           </div>
           <div className="form-group">
