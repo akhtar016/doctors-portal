@@ -1,9 +1,9 @@
 import React from "react";
 import fakeData from "./../../../../../../Data/fakeData.json";
-import { useParams, useLocation, Link } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./BookAppointment.css";
-import Popup from "reactjs-popup";
+
 
 const BookAppointment = (props) => {
   const { key } = useParams();
@@ -57,7 +57,7 @@ const BookAppointment = (props) => {
 
   return (
     <div className="book-appointment">
-      <div>
+      
         <form
           onSubmit={handleSubmit(onSubmit)}
           id="form-clear"
@@ -151,7 +151,7 @@ const BookAppointment = (props) => {
         </form>
 
       
-      </div>
+      
     </div>
   );
 };

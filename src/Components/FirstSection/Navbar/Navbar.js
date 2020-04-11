@@ -1,10 +1,9 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-
-        
       <nav className="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-expand-xl">
         <div
           className="collapse navbar-collapse d-flex justify-content-end"
@@ -12,34 +11,39 @@ const Navbar = () => {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="# ">
+              <Link to="/" className="nav-link">
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link to="/login" className="nav-link">
+                Doctor's Dashboard
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link to="/dental-services" className="nav-link">
                 Dental Services
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link to="/reviews" className="nav-link">
                 Reviews
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link to="/blog" className="nav-link">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link to="/contact-us" className="nav-link">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
