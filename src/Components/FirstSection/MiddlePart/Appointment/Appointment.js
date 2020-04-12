@@ -6,8 +6,11 @@ import fakeData from "./../../../../Data/fakeData.json";
 import "react-calendar/dist/Calendar.css";
 import CardViewAppointment from "./CardViewAppointment/CardViewAppointment";
 
+
 const Appointment = () => {
   const [date, setDate] = useState(new Date());
+
+  
 
   let onChange = (date) => {
     setDate(date);
@@ -63,7 +66,7 @@ const Appointment = () => {
       <div className="row my-3 custom-design">
 
           {
-              fakeData.map(available=> <CardViewAppointment available={available} formattedDate={availableDate}></CardViewAppointment> )
+              fakeData.map(available=> <CardViewAppointment available={available} formattedDate={availableDate} ></CardViewAppointment> )
           }
           
       </div>

@@ -3,10 +3,14 @@ import fakeData from "./../../../../../../Data/fakeData.json";
 import { useParams, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./BookAppointment.css";
+import PopUp from "../../../../../PopUp/PopUp";
 
 
 const BookAppointment = (props) => {
   const { key } = useParams();
+
+
+  const [modalShow, setModalShow] = React.useState(false);
 
   const location = useLocation(props);
 
@@ -18,8 +22,18 @@ const BookAppointment = (props) => {
 
   const { register, handleSubmit, errors } = useForm();
 
+  const showModal = () => setModalShow(true);
+
+  
+  
   const onSubmit = (data) => {
+
+    
     console.log(data);
+
+    showModal();
+
+    
 
     // post data to server
 
@@ -33,24 +47,39 @@ const BookAppointment = (props) => {
       .then((res) => res.json())
       .then((data) => {
         console.log("Added data",data);
+        
+      // // get data from database
+
+      //  fetch('https://doctor-portals.herokuapp.com/patientInfo')
+      //  .then(res => res.json())
+      //  .then(data=> {
+      //    console.log("Data from database: " ,data[data.length - 1]._id);
+      //  })
+
+
+
       });
 
     // clear input field
 
     document.getElementById("form-clear").reset();
 
-      // get data from database
-
-      fetch('https://doctor-portals.herokuapp.com/patientInfo')
-      .then(res => res.json())
-      .then(data=> {
-        console.log("Data from database: " ,data);
-      })
+     
       
 
       document.getElementById('spanText').innerText = "Your appointment request is successful";
-  
 
+
+      //  // get data from database
+
+      //  fetch('https://doctor-portals.herokuapp.com/patientInfo')
+      //  .then(res => res.json())
+      //  .then(data=> {
+      //    console.log("Data from database: " ,data[0]._id);
+      //  })
+      
+
+     
   };
 
  
@@ -150,8 +179,11 @@ const BookAppointment = (props) => {
           </div>
         </form>
 
-      
-      
+      <PopUp date={date}
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    
     </div>
   );
 };
