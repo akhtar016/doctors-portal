@@ -32,7 +32,7 @@ const BookAppointment = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log("Added data",data);
       });
 
     // clear input field
