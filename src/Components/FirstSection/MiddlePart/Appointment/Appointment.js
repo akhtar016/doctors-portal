@@ -66,7 +66,7 @@ const Appointment = () => {
       <div className="row my-3 custom-design">
 
           {
-              fakeData.map(available=> <CardViewAppointment available={available} formattedDate={availableDate} ></CardViewAppointment> )
+              fakeData.map(available=> <CardViewAppointment available={available} formattedDate={availableDate} key={available.id} ></CardViewAppointment> )
           }
           
       </div>

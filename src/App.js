@@ -6,7 +6,7 @@ import Appointment from './Components/FirstSection/MiddlePart/Appointment/Appoin
 import NotFound from './Components/NotFound/NotFound';
 import BookAppointment from './Components/FirstSection/MiddlePart/Appointment/CardViewAppointment/BookAppointment/BookAppointment';
 import Login from './Components/Login/Login';
-import Dashboard from './Components/FirstSection/Dashboard/Dashboard';
+import Dashboard from './Components/FirstSection/DashboardMain/DashboardMain';
 
 function App() {
   return (
