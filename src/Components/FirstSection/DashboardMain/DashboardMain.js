@@ -15,6 +15,7 @@ import Appointment from '../../DrawerItems/Appointment/Appointment';
 import Dashboard from "../../DrawerItems/Dashboard/Dashboard"
 import Patients from '../../DrawerItems/Patients/Patients';
 import Prescription from '../../DrawerItems/Prescription/Prescription';
+import "./DashboardMain.css";
 
 
 
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
  function DashboardMain() {
   const classes = useStyles();
 
-  const [component, setComponent] = useState('dashboard')
+  const [component, setComponent] = useState('dashboard');
 
   
 
@@ -91,10 +92,7 @@ const useStyles = makeStyles((theme) => ({
            <Patients></Patients>
           :
           component === 'prescription' &&  
-           <Prescription></Prescription>
-           
-          
-          
+           <Prescription></Prescription>   
         }
         
       </main>

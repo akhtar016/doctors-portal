@@ -4,11 +4,11 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit,  errors } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+   // console.log(data);
   }; // your form submit function which will invoke after successful validation
-  console.log(watch("example")); // you can watch individual input by pass the name of the input
+  //console.log(watch("example")); // you can watch individual input by pass the name of the input
 
   return (
     <div className="container">
